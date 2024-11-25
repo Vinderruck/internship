@@ -1,0 +1,60 @@
+ body{
+    background: #fff;
+  
+    width:100%;
+}
+.Loginform{
+    justify-content: center;
+    align-items: center;
+    display:flex;
+    flex-direction:column;
+    box-shadow: 1px 2px 5px 1px black;
+    width:70%;
+    margin:5rem auto;
+    border-radius:20px;
+    padding:3rem;
+ 
+}
+.FormInput{
+   text-align: center;
+ width:100%
+}
+.logo{
+    width:50%;
+    margin:3px auto;
+    height:100px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+ img{
+   height:250px;
+   object-fit:content;
+   @media screen and (max-Width:310px){
+    height:200px
+   }
+   
+}
+.LabelForm{
+    text-align: center;
+    font-weight: bold;
+}
+.logLinks{
+   display:flex;
+    justify-content: center;
+    align-items:center ;
+    margin:0.5rem;
+    background:white;
+    height:auto;
+    border-radius:20px;
+    width:100%;
+    box-shadow: 1px 2px 1px 3px black;
+    @media screen and (max-Width:550px){
+        flex-direction:column;
+    }
+    @media screen and (max-Width:300px){
+        background:none; 
+        box-shadow:none;
+    }
+}

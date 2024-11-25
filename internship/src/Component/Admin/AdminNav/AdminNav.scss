@@ -1,0 +1,53 @@
+.SideBarStart{
+ margin-top:10rem;
+ position: fixed;
+ left:0;
+ margin-left:2rem;
+ width:35px;
+ height:35px;
+ box-shadow: 1px 1px 1px 1px black;
+padding:6px;
+border-radius: 50%;
+
+}
+.icon{
+    width:100%;
+    height:100%;
+ }
+ .InSideBar{
+    position:fixed;
+    left:0;
+    margin-left: 0.5rem;
+    margin-top:27rem;
+    
+    width:20%;
+    height:50vh;
+    box-shadow: 1px 1px 4px 1px black;
+    border-radius: 20px;
+   
+ }
+ .closinsidebar{
+    position:absolute;
+    right:0;
+    margin-right: 0.5rem;
+    box-shadow: 1px 1px 1px 2px black;
+    width:35px;
+ height:35px;
+ box-shadow: 1px 1px 1px 1px black;
+padding:2px;
+border-radius: 50%;
+   
+ }
+ .Linkside{
+    justify-content: center;
+    align-items: center;
+    display:flex;
+    flex-direction:column;
+    margin-top:4rem;
+ }
+ .Paragraph{
+    color:black;
+    gap:10;
+    text-decoration: none;
+
+}

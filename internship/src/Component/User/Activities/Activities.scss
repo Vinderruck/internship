@@ -1,0 +1,63 @@
+.Arrow{
+    justify-content: space-between;
+    display:flex;
+    align-items: center;
+}
+.Arrow1{
+    margin-left:3rem;
+    background:black;
+    color:white;
+    margin-top:1rem;
+    width:35px;
+    height:35px;
+    justify-content:center;
+    display:flex;
+    align-items:center;
+    border-radius:10px;
+    box-shadow: 1px 1px 2px 1px white;
+}
+.Arrow2{
+    margin-right:3rem;
+    background:black;
+    color:white;
+    margin-top:1rem;
+    width:35px;
+    height:35px;
+    justify-content:center;
+    display:flex;
+    align-items:center;
+    border-radius:10px;
+    box-shadow: 1px 1px 2px 1px white;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: skyblue;
+    height: 50vh;
+    border:1px solid black;
+    border-radius:20px;
+width:80%;
+  }
+  .text{
+    font-weight: bold;
+    margin:0.5rem;
+  }
+  .div{
+    justify-content:center;
+    align-items:center;
+    display:flex;
+    margin:1rem;
+    border-radius:10px;
+    box-shadow: 1px 1px 1px 1px black;
+    text-align:center
+  }
+  .textdirection{
+    background:black;
+    color:white;
+    text-align:center;
+    margin:1rem;
+    box-shadow: 1px 1px 1px 1px white;
+    padding:1px;
+    border-radius:10px
+  }

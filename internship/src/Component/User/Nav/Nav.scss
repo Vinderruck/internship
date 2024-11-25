@@ -1,0 +1,147 @@
+.NavStart{
+    position:fixed;
+    justify-content:space-between;
+    align-items: center;
+    display:flex;
+    width:100%;
+    margin:auto;
+    background:white;
+    border-radius: 0px;
+    box-shadow:1px 1px 1px 1px black;
+
+}
+.logo1{
+    width:20%;
+     height:100px;
+    position:relative;
+   
+    left:0;
+    justify-content:center;
+    align-items:center;
+    display:flex; 
+
+
+    @media screen and (max-width:650px){
+        width:50%
+    }
+    
+}
+ 
+.Logo {
+    display: inline-block;
+    max-width: 70%;
+    height: auto;
+    margin :auto;
+    padding: 0;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+    text-align: inherit;
+    vertical-align: middle;
+  
+  }
+  .RightNav{
+    justify-content:space-between;
+    align-items: flex-end;
+    position:fixed;
+    right:0;
+    display:flex;
+    margin-right:2rem;
+    padding:1rem;
+    border:1px solid black;
+    gap:2rem;
+    border-radius:10px;
+    box-shadow: 1px 1px 2px 4px white;;
+
+
+  }
+  .date{
+    border:1px solid white;
+    border-radius:10px;
+    padding:0.5rem;
+    font-weight: bold;
+    box-shadow: 1px 1px 2px 1px white;
+    background:black;
+     
+    justify-content: center;
+    display:flex;
+    color:white;
+
+  }
+  .Profile{
+    border:1px solid white;
+    border-radius:10px;
+    padding:0.5rem;
+    font-weight: bold;
+    box-shadow: 1px 1px 2px 1px white;
+    background:black;
+width:40px;
+height:40px;
+justify-content: center;
+display:flex;
+  position:relative;
+
+    .icon{
+        width:100%;
+        color:white;
+        height:100%;
+      
+    }
+ 
+  }
+  .ProfileDiv{
+    right:0;
+    position:fixed;
+  width:40%;
+  height:40vh;
+  margin-top: 2rem;
+  box-shadow: 1px 1px 1px 1px black;
+  border-radius:20px;
+  margin-right:2rem;
+  justify-content: center;
+  align-items:center;
+  display:flex;
+  flex-direction:column;
+  background-color: #fff;
+  
+  
+  
+  .ProfileButton
+  {
+    justify-content: space-between;
+    align-items:center;
+    display:flex;
+    box-shadow: 1px 1px 1px 1px black;
+    margin-top:0.3rem;
+    border-radius: 10px;
+    width:80%;
+ 
+  }
+  }
+  .InProfile{
+    box-shadow: 1px 1px 2px 1px black;
+    border-radius: 10px;
+    width:90%;
+    align-items:center;
+    overflow: auto;
+ 
+    
+  }
+  .NavbarBack{
+    justify-content:center;
+    align-items: center;
+    display:flex;
+    position:fixed;
+    margin-top:10rem;
+    margin-left:1rem;
+    box-shadow:1px 1px 2px 1px black;
+    width:35px;
+    height:35px;
+    padding:5px;
+    border-radius:50%;
+  
+   .icons{
+      width:100%;
+      height:100%;
+    }
+  }
