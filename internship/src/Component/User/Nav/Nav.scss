@@ -21,9 +21,16 @@
     display:flex; 
 
 
-    @media screen and (max-width:650px){
+    @media screen and (max-width:600px){
         width:50%
     }
+    @media screen and (min-width:599px)  and (max-width:700px){
+      width:40%
+  }
+  @media screen and (min-width:699px)  and (max-width:900px){
+    width:30%
+}
+
     
 }
 .sm_Menu{
@@ -36,6 +43,11 @@
  box-shadow: 1px 1px 1px 1px black;
 padding:6px;
 border-radius: 50%;
+
+
+@media screen and (min-width:600px){
+  display:none;
+}
 }
  
 .Logo {
@@ -63,7 +75,7 @@ border-radius: 50%;
     gap:2rem;
     border-radius:10px;
     box-shadow: 1px 1px 2px 4px white;;
-@media screen and (max-width:600px){
+@media screen and (max-width:599px){
   display:none
 }
 

@@ -20,6 +20,7 @@ const AdminNav = ({onLinkClick}) => {
   const [Name, setName] = useState(null)
   const [Email, setEmail] = useState(null)
   const [Sidebar, setSidebar]=useState(false)
+  const [smMenu, setSmMenu]=useState(false)
     const formatDate = (date) => {
         const options = { weekday: 'long', month: 'numeric', year: 'numeric', day: 'numeric' };
         return  new Date(date).toLocaleDateString('en-US',options);
@@ -72,7 +73,32 @@ console.los(res)
     <section className="bg-primary-subtle NavStart" style={{zIndex:"10"}}>
         <div className="logo1"><img src={logo} alt="logo"  className="d-block mx-auto my-4 px-2 py-3 w-100 text-center text-lg-left img-fluid Logo shade"/></div>
        
-       <div className="sm_Menu"><MdMenuOpen className="icon"/></div> 
+        <div className="sm_Menu"><MdMenuOpen  onClick={()=>setSmMenu(!smMenu)} className="icon"/>
+
+{smMenu &&(
+  <div className="insidesmmenu">
+     <div className="Profile"><CgProfile  onClick={()=>{setProfile(!Profile);setSmMenu(!smMenu);setSidebar(false)}}className="icon"/> </div>
+    <div className="date">  {formattedDate}</div>
+  
+    <div className="ProfileButton">  <Button className="m-1">Edit</Button>
+  <Button className="m-1" onClick={handleLogOut}>LogOut</Button>
+  
+  </div>
+  </div>
+  
+)}
+ {Profile && (
+    <div className="ProfileDiv" onClick={()=>setProfile(!Profile)}>
+      
+      <div className="InProfile">
+      <img src={`http://localhost:5050${Image.path}`} alt={Image.fileName} className="mt-2"/> 
+      <p style={{display:'flex',fontSize:'13px',flexDirection:'column',margin:"7px"}}> <span>Name:</span><span>{Name}</span></p>
+      <p style={{display:'flex',fontSize:'13px',flexDirection:'column',margin:"7px"}}><span>Email:</span><span>{Email}</span></p>
+    
+    </div>
+    </div>)}
+</div>
+
        <div className="RightNav">
 
 <div className="date">  {formattedDate}</div>
