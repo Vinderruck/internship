@@ -5,6 +5,7 @@ import React,{useState,useEffect} from 'react';
 import { Button } from 'react-bootstrap';
 import axios from 'axios';
 import { FaCircleArrowLeft } from "react-icons/fa6";
+import { MdMenuOpen } from "react-icons/md";
  
 
 const Nav = ({onLinkClick}) => {
@@ -67,6 +68,7 @@ try {
     <section className="bg-primary-subtle NavStart" style={{zIndex:"10"}}>
         <div className="logo1"><img src={logo} alt="logo"  className="d-block mx-auto my-4 px-2 py-3 w-100 text-center text-lg-left img-fluid Logo shade"/></div>
       <div className="NavbarBack"> <FaCircleArrowLeft className="icons" onClick={()=>onLinkClick('Component1')}/></div>
+      <div className="sm_Menu"><MdMenuOpen className="icon"/></div> 
         <div className="RightNav">
 
 <div className="date">  {formattedDate}</div>

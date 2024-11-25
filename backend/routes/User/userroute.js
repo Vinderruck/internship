@@ -1,9 +1,8 @@
 import express from 'express';
 import bcrypt from 'bcryptjs';
- import User from "../../Schemas/UserSchema.js";
  import  multer from 'multer';
   import { Authentication } from '../../Authentication/Authentication.js';
-  import UserData from '../../Schemas/UserDataSchema.js';
+  import {Leave,User, UserData} from '../../Schemas/index.js';
 
 
 
@@ -175,8 +174,26 @@ else {
 
 //This function will send leave form
 
-route.post('/Leave',(req,res)=>{
+route.post('/Leave', async (req,res)=>{
   const Leaveform =req.body
-  console.log(Leaveform)
+ 
+console.log(Leaveform)
+  if(!Leaveform){
+return res.status(501).json({message:`The form is not valid form`})
+  }
+try {
+  
+  const LeaveInfo = new Leave({
+    Email:Leaveform.Email,
+    StartDate:Leaveform.StartDate,
+    EndDate:Leaveform.EndDate,
+    reason:Leaveform.reason
+  })
+  await LeaveInfo.save()
+  return res.send({message:'Leave Form Sent'})
+} catch (error) {
+  return res.status(402).json(error)
+}
+ 
 })
 export default route

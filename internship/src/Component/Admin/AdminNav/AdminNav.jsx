@@ -11,6 +11,7 @@ import { CiCircleList } from "react-icons/ci";
 import { TbReport } from "react-icons/tb";
 import { FcApproval } from "react-icons/fc";
 import { SlLogin } from "react-icons/sl";
+import { MdMenuOpen } from "react-icons/md";
 
 const AdminNav = ({onLinkClick}) => {
  
@@ -70,7 +71,9 @@ console.los(res)
 
     <section className="bg-primary-subtle NavStart" style={{zIndex:"10"}}>
         <div className="logo1"><img src={logo} alt="logo"  className="d-block mx-auto my-4 px-2 py-3 w-100 text-center text-lg-left img-fluid Logo shade"/></div>
-        <div className="RightNav">
+       
+       <div className="sm_Menu"><MdMenuOpen className="icon"/></div> 
+       <div className="RightNav">
 
 <div className="date">  {formattedDate}</div>
 <div className="Profile"><CgProfile  onClick={()=>setProfile(!Profile)} className="icon"/> 

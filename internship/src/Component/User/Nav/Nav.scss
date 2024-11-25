@@ -26,6 +26,17 @@
     }
     
 }
+.sm_Menu{
+  
+ position: fixed;
+ right:0;
+ margin-right:1rem;
+ width:35px;
+ height:35px;
+ box-shadow: 1px 1px 1px 1px black;
+padding:6px;
+border-radius: 50%;
+}
  
 .Logo {
     display: inline-block;
@@ -52,7 +63,9 @@
     gap:2rem;
     border-radius:10px;
     box-shadow: 1px 1px 2px 4px white;;
-
+@media screen and (max-width:600px){
+  display:none
+}
 
   }
   .date{

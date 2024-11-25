@@ -1,5 +1,5 @@
  
-import React,{useState} from 'react'
+import React,{useState,useEffect} from 'react'
 import { Form,Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
  import 'bootstrap/dist/js/bootstrap.min.js';
@@ -10,13 +10,45 @@ const Leave = () => {
     const [endDate, setEndDate] = useState("");
     const [reason, setReason] = useState("");
     const [Sent, setSent] = useState(null)
+    const [Email, setEmail] = useState(null);
+
+
+
+//function geting the seeion 
+useEffect(() => {
+  
+  const Authentication = async () => {
+     // Hook for navigation
+    try {
+        // Make the GET request with credentials
+        const response = await axios.get('http://localhost:5050/User/Cookies', {
+            withCredentials: true, // Ensure cookies are sent with the request
+        });
+        
+        if (response.data) {
+          // If session is valid, update state and navigate to dashboard
+          
+          setEmail(response.data.User.Email)
+      
+      }  
+    } catch (error) {
+    
+    }
+  };
+    Authentication()
+  }, [])
+
+
+
 
 //Function handling submitting the Leave Form
 const handleSubmit = async (e)=>{
   e.preventDefault()
 const LeaveData={
+  Email,
   startDate,
-  endDate,reason
+  endDate,
+  reason
 }
 try {
   await axios.post("http://localhost:5050/User/Leave",{
